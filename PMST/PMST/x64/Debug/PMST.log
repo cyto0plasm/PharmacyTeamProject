@@ -1,4 +1,7 @@
-﻿  Dashboard.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
+﻿  Dashboard.cpp
+  main.cpp
+  Generating Code...
+  CategoryController.obj : MSIL module encountered; incremental linking is disabled for MSIL; performing full link
 x64\Debug\.NETFramework,Version=v4.8.AssemblyAttributes.obj : warning LNK4042: object specified more than once; extras ignored
 x64\Debug\Dashboard.obj : warning LNK4042: object specified more than once; extras ignored
-  PMST.vcxproj -> D:\study\VisualStudio\PMST\x64\Debug\PMST.exe
+  PMST.vcxproj -> D:\explain\PMST\x64\Debug\PMST.exe

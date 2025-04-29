@@ -1,8 +1,11 @@
+  PMST.Forms.Register.resources - Embedded, ContainedInManifestFile, 
   PMST.Dashboard.resources - Embedded, ContainedInManifestFile, 
 ImageRuntimeVersion: v4.0.30319
 Assembly PMST, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
 	hash=SHA1, flags=PublicKey
 Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly MySql.Data, Version=9.3.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d: 
 	hash=None, flags=None
 Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
@@ -14,6 +17,234 @@ Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=
 	hash=None, flags=None
 Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
 	hash=None, flags=None
+Class PMST.CategoryModel: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.DateTime Updated_At 'get set' : 
+    System.DateTime Created_At 'get set' : 
+    Int32 Pharmacy_Id 'get set' : 
+    System.String Description 'get set' : 
+    System.String Name 'get set' : 
+    Int32 Id   'get set' : 
+  Methods:
+    get_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Id(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    set_Name(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Description(): PrivateScope, Public, HideBySig, SpecialName
+    set_Description(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Pharmacy_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Pharmacy_Id(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Created_At(): PrivateScope, Public, HideBySig, SpecialName
+    set_Created_At(DateTime): PrivateScope, Public, HideBySig, SpecialName
+    get_Updated_At(): PrivateScope, Public, HideBySig, SpecialName
+    set_Updated_At(DateTime): PrivateScope, Public, HideBySig, SpecialName
+Class PMST.CategoryController: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    CreateCategory(CategoryModel): PrivateScope, Public, HideBySig
+    GetAllCategories(): PrivateScope, Public, Static, HideBySig
+    UpdateCategory(CategoryModel): PrivateScope, Public, Static, HideBySig
+    DeleteCategory(Int32): PrivateScope, Public, Static, HideBySig
+Class PMST.PharmacyModel: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Int32, Int32, System.String, System.String, System.DateTime, System.DateTime): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.DateTime Updated_At 'get set' : 
+    System.DateTime Created_At 'get set' : 
+    System.String Location 'get set' : 
+    System.String Name 'get set' : 
+    Int32 Owner_Id 'get set' : 
+    Int32 Id   'get set' : 
+  Methods:
+    get_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Id(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Owner_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Owner_Id(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    set_Name(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Location(): PrivateScope, Public, HideBySig, SpecialName
+    set_Location(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Created_At(): PrivateScope, Public, HideBySig, SpecialName
+    set_Created_At(DateTime): PrivateScope, Public, HideBySig, SpecialName
+    get_Updated_At(): PrivateScope, Public, HideBySig, SpecialName
+    set_Updated_At(DateTime): PrivateScope, Public, HideBySig, SpecialName
+Class PMST.PharmaciesController: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    CreatePharmacy(PharmacyModel): PrivateScope, Public, HideBySig
+    GetAllPharmacies(): PrivateScope, Public, HideBySig
+    UpdatePharmacy(PharmacyModel): PrivateScope, Public, HideBySig
+    DeletePharmacy(Int32): PrivateScope, Public, HideBySig
+Class PMST.ProductModel: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.DateTime Updated_At 'get set' : 
+    System.DateTime Created_At 'get set' : 
+    Int32 Quantity 'get set' : 
+    System.Decimal Price 'get set' : 
+    System.String Name 'get set' : 
+    Int32 Supplier_Id 'get set' : 
+    Int32 Category_Id 'get set' : 
+    Int32 Pharmacy_Id 'get set' : 
+    Int32 Id   'get set' : 
+  Methods:
+    get_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Id(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Pharmacy_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Pharmacy_Id(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Category_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Category_Id(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Supplier_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Supplier_Id(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    set_Name(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Price(): PrivateScope, Public, HideBySig, SpecialName
+    set_Price(Decimal): PrivateScope, Public, HideBySig, SpecialName
+    get_Quantity(): PrivateScope, Public, HideBySig, SpecialName
+    set_Quantity(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Created_At(): PrivateScope, Public, HideBySig, SpecialName
+    set_Created_At(DateTime): PrivateScope, Public, HideBySig, SpecialName
+    get_Updated_At(): PrivateScope, Public, HideBySig, SpecialName
+    set_Updated_At(DateTime): PrivateScope, Public, HideBySig, SpecialName
+Class PMST.ProductsController: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    CreateProduct(ProductModel): PrivateScope, Public, HideBySig
+    GetAllProducts(): PrivateScope, Public, HideBySig
+    UpdateProduct(ProductModel): PrivateScope, Public, HideBySig
+    DeleteProduct(Int32): PrivateScope, Public, HideBySig
+Class PMST.SaleModel: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.DateTime Updated_At 'get set' : 
+    System.DateTime Created_At 'get set' : 
+    System.Decimal Total_Price 'get set' : 
+    Int32 Quantity 'get set' : 
+    System.Nullable`1[System.Int32] User_Id 'get set' : 
+    Int32 Product_Id 'get set' : 
+    Int32 Pharmacy_Id 'get set' : 
+    Int32 Id   'get set' : 
+  Methods:
+    get_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Id(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Pharmacy_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Pharmacy_Id(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Product_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Product_Id(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_User_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_User_Id(Nullable`1): PrivateScope, Public, HideBySig, SpecialName
+    get_Quantity(): PrivateScope, Public, HideBySig, SpecialName
+    set_Quantity(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Total_Price(): PrivateScope, Public, HideBySig, SpecialName
+    set_Total_Price(Decimal): PrivateScope, Public, HideBySig, SpecialName
+    get_Created_At(): PrivateScope, Public, HideBySig, SpecialName
+    set_Created_At(DateTime): PrivateScope, Public, HideBySig, SpecialName
+    get_Updated_At(): PrivateScope, Public, HideBySig, SpecialName
+    set_Updated_At(DateTime): PrivateScope, Public, HideBySig, SpecialName
+Class PMST.SalesController: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    CreateSale(SaleModel): PrivateScope, Public, HideBySig
+    GetAllSales(): PrivateScope, Public, HideBySig
+    UpdateSale(SaleModel): PrivateScope, Public, HideBySig
+    DeleteSale(Int32): PrivateScope, Public, HideBySig
+Class PMST.StockHistoryModel: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.DateTime Updated_At 'get set' : 
+    System.DateTime Created_At 'get set' : 
+    System.String Note 'get set' : 
+    Int32 Quantity_Changed 'get set' : 
+    System.String Change_Type 'get set' : 
+    Int32 Product_Id 'get set' : 
+    Int32 Pharmacy_Id 'get set' : 
+    Int32 Id   'get set' : 
+  Methods:
+    get_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Id(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Pharmacy_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Pharmacy_Id(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Product_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Product_Id(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Change_Type(): PrivateScope, Public, HideBySig, SpecialName
+    set_Change_Type(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Quantity_Changed(): PrivateScope, Public, HideBySig, SpecialName
+    set_Quantity_Changed(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Note(): PrivateScope, Public, HideBySig, SpecialName
+    set_Note(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Created_At(): PrivateScope, Public, HideBySig, SpecialName
+    set_Created_At(DateTime): PrivateScope, Public, HideBySig, SpecialName
+    get_Updated_At(): PrivateScope, Public, HideBySig, SpecialName
+    set_Updated_At(DateTime): PrivateScope, Public, HideBySig, SpecialName
+Class PMST.StockHistoryController: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    CreateHistoryEntry(StockHistoryModel): PrivateScope, Public, HideBySig
+    GetAllHistory(): PrivateScope, Public, HideBySig
+    UpdateHistoryEntry(StockHistoryModel): PrivateScope, Public, HideBySig
+    DeleteHistoryEntry(Int32): PrivateScope, Public, HideBySig
+Class PMST.SupplierModel: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.DateTime Updated_At 'get set' : 
+    System.DateTime Created_At 'get set' : 
+    System.String Contact_Info 'get set' : 
+    System.String Name 'get set' : 
+    Int32 Pharmacy_Id 'get set' : 
+    Int32 Id   'get set' : 
+  Methods:
+    get_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Id(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Pharmacy_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Pharmacy_Id(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Name(): PrivateScope, Public, HideBySig, SpecialName
+    set_Name(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Contact_Info(): PrivateScope, Public, HideBySig, SpecialName
+    set_Contact_Info(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Created_At(): PrivateScope, Public, HideBySig, SpecialName
+    set_Created_At(DateTime): PrivateScope, Public, HideBySig, SpecialName
+    get_Updated_At(): PrivateScope, Public, HideBySig, SpecialName
+    set_Updated_At(DateTime): PrivateScope, Public, HideBySig, SpecialName
+Class PMST.SuppliersController: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    CreateSupplier(SupplierModel): PrivateScope, Public, HideBySig
+    GetAllSuppliers(): PrivateScope, Public, HideBySig
+    UpdateSupplier(SupplierModel): PrivateScope, Public, HideBySig
+    DeleteSupplier(Int32): PrivateScope, Public, HideBySig
+Class PMST.UserModel: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.DateTime Updated_At 'get set' : 
+    System.DateTime Created_At 'get set' : 
+    System.String Email 'get set' : 
+    System.String Password 'get set' : 
+    System.String Username 'get set' : 
+    Int32 Id   'get set' : 
+  Methods:
+    get_Id(): PrivateScope, Public, HideBySig, SpecialName
+    set_Id(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Username(): PrivateScope, Public, HideBySig, SpecialName
+    set_Username(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Password(): PrivateScope, Public, HideBySig, SpecialName
+    set_Password(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Email(): PrivateScope, Public, HideBySig, SpecialName
+    set_Email(String): PrivateScope, Public, HideBySig, SpecialName
+    get_Created_At(): PrivateScope, Public, HideBySig, SpecialName
+    set_Created_At(DateTime): PrivateScope, Public, HideBySig, SpecialName
+    get_Updated_At(): PrivateScope, Public, HideBySig, SpecialName
+    set_Updated_At(DateTime): PrivateScope, Public, HideBySig, SpecialName
+Class PMST.UsersController: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Methods:
+    CreateUser(UserModel): PrivateScope, Public, HideBySig
+    GetAllUsers(): PrivateScope, Public, HideBySig
+    UpdateUser(UserModel): PrivateScope, Public, HideBySig
+    DeleteUser(Int32): PrivateScope, Public, HideBySig
 Class PMST.Dashboard: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Class PMST.MyForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
   :System.Windows.Forms.Form
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName

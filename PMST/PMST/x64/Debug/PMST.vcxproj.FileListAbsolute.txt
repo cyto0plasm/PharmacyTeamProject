@@ -1,3 +1,8 @@
 D:\study\VisualStudio\PMST\PMST\x64\Debug\PMST.vcxproj.AssemblyReference.cache
 D:\study\VisualStudio\PMST\PMST\x64\Debug\PMST.Forms.Dashboard.resources
 D:\study\VisualStudio\PMST\PMST\x64\Debug\PMST.vcxproj.GenerateResource.cache
+D:\explain\PMST\PMST\x64\Debug\PMST.vcxproj.AssemblyReference.cache
+D:\explain\PMST\PMST\x64\Debug\PMST.Forms.Dashboard.resources
+D:\explain\PMST\PMST\x64\Debug\PMST.Forms.Register.resources
+D:\explain\PMST\PMST\x64\Debug\PMST.vcxproj.GenerateResource.cache
+D:\explain\PMST\PMST\x64\Debug\PMST.vcxproj.Up2Date

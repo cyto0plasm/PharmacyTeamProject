@@ -118,6 +118,9 @@
   </ItemDefinitionGroup>
   <!-- References -->
   <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>C:\Program Files (x86)\MySQL\MySQL Connector NET 9.3\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -126,19 +129,57 @@
   </ItemGroup>
   <!-- Source files -->
   <ItemGroup>
+    <ClCompile Include="Controllers\CategoryController.cpp" />
+    <ClCompile Include="Controllers\PharmaciesController.cpp" />
+    <ClCompile Include="Controllers\ProductsController.cpp" />
+    <ClCompile Include="Controllers\SalesController.cpp" />
+    <ClCompile Include="Controllers\StockHistoryController.cpp" />
+    <ClCompile Include="Controllers\SuppliersController.cpp" />
+    <ClCompile Include="Controllers\UsersController.cpp" />
+    <ClCompile Include="Database\DBConnection.cpp" />
     <ClCompile Include="Forms\Dashboard.cpp" />
+    <ClCompile Include="Forms\main.cpp" />
+    <ClCompile Include="Forms\Register.cpp" />
+    <ClCompile Include="Models\CategoryModel.cpp" />
+    <ClCompile Include="Models\PharmacyModel.cpp" />
+    <ClCompile Include="Models\ProductModel.cpp" />
+    <ClCompile Include="Models\SaleModel.cpp" />
+    <ClCompile Include="Models\StockHistoryModel.cpp" />
+    <ClCompile Include="Models\SupplierModel.cpp" />
+    <ClCompile Include="Models\UserModel.cpp" />
   </ItemGroup>
   <!-- Include form header -->
   <ItemGroup>
+    <ClInclude Include="Controllers\CategoryController.h" />
+    <ClInclude Include="Controllers\PharmaciesController.h" />
+    <ClInclude Include="Controllers\ProductsController.h" />
+    <ClInclude Include="Controllers\SalesController.h" />
+    <ClInclude Include="Controllers\StockHistoryController.h" />
+    <ClInclude Include="Controllers\SuppliersController.h" />
+    <ClInclude Include="Controllers\UsersController.h" />
+    <ClInclude Include="Database\DBConnection.h" />
     <ClInclude Include="Forms\Dashboard.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="Forms\Register.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Models\CategoryModel.h" />
+    <ClInclude Include="Models\PharmacyModel.h" />
+    <ClInclude Include="Models\ProductModel.h" />
+    <ClInclude Include="Models\SaleModel.h" />
+    <ClInclude Include="Models\StockHistoryModel.h" />
+    <ClInclude Include="Models\SupplierModel.h" />
+    <ClInclude Include="Models\UserModel.h" />
   </ItemGroup>
   <!-- Embed Dashboard resources with correct logical name -->
   <ItemGroup>
     <EmbeddedResource Include="Forms\Dashboard.resx">
       <DependentUpon>Forms\Dashboard.h</DependentUpon>
       <LogicalName>$(RootNamespace).Dashboard.resources</LogicalName>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Register.resx">
+      <DependentUpon>Forms\Register.h</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <!-- Icon and image resources -->
@@ -190,7 +231,6 @@
     <Text Include="x64\Debug\PMST.log" />
     <Text Include="x64\Debug\PMST.vcxproj.FileListAbsolute.txt" />
   </ItemGroup>
-
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets" />
 </Project>
